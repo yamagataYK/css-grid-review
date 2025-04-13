@@ -2,13 +2,36 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    min-height: 100vh;
+    display: grid;
+}
+
 .grid {
     display: grid;
-    /* grid-template-columns: 100px 1fr 1fr 100px; */
-    /* grid-template-rows: 100px 1fr 1fr 100px; */
-    grid-template: 100px 1fr / 200px 1fr;
+    grid-template:
+        "head head" 100px " side main" 1fr " foot foot" 80px /240px 1fr
+        /* grid-template-columns: 100px 1fr 1fr 100px; */
+        /* grid-template-rows: 100px 1fr 1fr 100px; */
+        /* grid-template: 100px 1fr / 200px 1fr;
     padding: 1rem;
-    height: 500px;
+    height: 500px; */
+}
+
+.header {
+    grid-area: head;
+}
+
+.sidebar {
+    grid-area: side;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: foot;
 }
 
 .item {
