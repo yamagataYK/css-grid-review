@@ -5,36 +5,31 @@ html {
 body {
     min-height: 100vh;
     display: grid;
-}
-
-.grid {
-    display: grid;
     grid-template:
-        "head head" 100px " side main" 1fr " foot foot" 80px /240px 1fr
-        /* grid-template-columns: 100px 1fr 1fr 100px; */
-        /* grid-template-rows: 100px 1fr 1fr 100px; */
-        /* grid-template: 100px 1fr / 200px 1fr;
-    padding: 1rem;
-    height: 500px; */
+        "header header" auto
+        "sidebar main" 1fr
+        "footer footer" auto
+        /240px 1fr
+    ;
 }
 
-.header {
-    grid-area: head;
+header {
+    grid-area: header;
+    height: 80px;
+    border-bottom: 1px solid #000;
 }
 
-.sidebar {
-    grid-area: side;
+aside {
+    grid-area: sidebar;
+    background: #ccc;
 }
 
-.main {
+main {
     grid-area: main;
 }
 
-.footer {
-    grid-area: foot;
-}
-
-.item {
-    border: 1px solid #000;
-    padding: 1rem;
+footer {
+    grid-area: footer;
+    background-color: #eee;
+    height: 200px;
 }
