@@ -17,6 +17,20 @@ header {
     grid-area: header;
     height: 80px;
     border-bottom: 1px solid #000;
+
+    .header-nav {
+        magin-bottom: 2rem;
+
+        &__list {
+            display: flex;
+            list-style: none;
+
+            &__item {
+                margin: 1rem;
+            }
+        }
+    }
+
 }
 
 aside {
@@ -26,6 +40,17 @@ aside {
 
 main {
     grid-area: main;
+
+    p {
+        &+& {
+            margin-top: 1em;
+        }
+
+        &.text-bold {
+            font-weight: bold;
+        }
+    }
+
 }
 
 footer {
